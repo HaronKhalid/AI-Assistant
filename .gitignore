@@ -1,0 +1,150 @@
+# ============================================================
+#  ARIA Voice Assistant — .gitignore
+#  Covers: Python, Models, Data, Logs, OS files, IDEs
+# ============================================================
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Virtual environments ─────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# ── AI Models (too large for GitHub — download separately) ───
+models/
+*.onnx
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.gguf
+*.ggml
+*.tflite
+*.mlmodel
+
+# Whisper cache
+~/.cache/whisper/
+.cache/
+
+# ── User data & memory (private) ────────────────────────────
+data/memory.db
+data/tasks.db
+data/knowledge/about_me.txt
+
+# Keep knowledge folder structure but not personal files
+!data/
+!data/knowledge/
+!data/knowledge/.gitkeep
+
+# ── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+*.log.*
+
+# ── Environment & secrets ────────────────────────────────────
+.env
+.env.local
+.env.production
+*.secret
+secrets.yaml
+api_keys.yaml
+
+# ── OS files ─────────────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ── IDEs & Editors ───────────────────────────────────────────
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim / Neovim
+*.swp
+*.swo
+*.swn
+Session.vim
+.netrwhist
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ── Audio & temp files ───────────────────────────────────────
+*.wav
+*.mp3
+*.ogg
+*.flac
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ── Test & coverage ──────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# ── Jupyter ──────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Docker ───────────────────────────────────────────────────
+.dockerignore
+
+# ── Keep these empty folders in repo ─────────────────────────
+!models/.gitkeep
+!logs/.gitkeep
+!data/.gitkeep
+!data/knowledge/.gitkeep

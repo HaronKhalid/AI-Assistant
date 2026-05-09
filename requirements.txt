@@ -1,0 +1,33 @@
+# ARIA Voice Assistant — Python Requirements
+# Install via: pip install -r requirements.txt
+
+# Core Audio
+sounddevice>=0.4.6
+pyaudio>=0.2.13
+pydub>=0.25.1
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Speech To Text
+openai-whisper>=20231117
+
+# Voice Activity Detection
+silero-vad>=5.1.2
+
+# Wake Word
+openwakeword>=0.6.0
+
+# Text To Speech (Piper is a binary; this is its Python wrapper)
+# Piper binary is installed by setup.sh
+
+# LLM / Brain
+ollama>=0.1.7
+
+# Utilities
+requests>=2.31.0
+pyyaml>=6.0.1
+colorlog>=6.7.0
+rich>=13.7.0
+
+# PyTorch CPU (installed separately in setup.sh for correct index URL)
+# torch, torchvision, torchaudio

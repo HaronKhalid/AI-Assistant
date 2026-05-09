@@ -1,0 +1,11 @@
+# ARIA Skills Reference
+ARIA can do the following:
+- Set timers: "set a timer for 10 minutes"
+- Weather: "what's the weather today"
+- Volume: "volume up", "volume down", "set volume to 50"
+- Open apps: "open firefox", "open terminal"
+- Screenshot: "take a screenshot"
+- Web search: "search for latest news"
+- Notes: "save a note", "read my notes"
+- Memory: "remember that my name is X", "what do you know about me"
+- Clear history: "clear conversation history"

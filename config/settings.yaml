@@ -1,0 +1,91 @@
+# ============================================================
+#  ARIA — Configuration (Kokoro-ONNX Voice)
+# ============================================================
+
+A:
+  name: "Aria"
+  language: "en"
+  debug: false
+
+wake_word:
+  enabled: false
+  model: "hey_jarvis"
+  threshold: 0.5
+  chunk_size: 1280
+
+stt:
+  engine: "whisper"
+  whisper_model: "tiny"
+  language: "en"
+  silence_timeout: 1.2
+
+vad:
+  enabled: true
+  engine: "silero"
+  sample_rate: 16000
+  threshold: 0.5
+  min_speech_duration_ms: 250
+  max_speech_duration_s: 20
+  min_silence_duration_ms: 700
+
+brain:
+  assistant_name: "Aria"
+  engine: "phi3"
+  model: "gemma4"
+  temperature: 0.7
+  max_tokens: 1024
+  memory_db: "data/memory.db"
+  knowledge_dir: "data/knowledge"
+  system_prompt: ""
+
+# ── TTS — Kokoro-ONNX ────────────────────────────────────────
+tts:
+  engine: "kokoro"
+
+  # Best female voices (change kokoro_voice to switch):
+  #   af_heart   — warm, flowing, most natural ❤️  (recommended)
+  #   af_bella   — smooth and confident
+  #   af_sarah   — clear and friendly
+  #   af_nova    — bright and energetic
+  #   af_nicole  — soft and calm
+  #   bf_emma    — British English, elegant
+  #   bf_isabella— British English, rich
+  kokoro_voice: "af_heart"
+
+  # Model files (auto-downloaded on first run)
+  kokoro_model:  "models/kokoro/kokoro-v1.0.onnx"
+  kokoro_voices: "models/kokoro/voices-v1.0.bin"
+
+  # Fallbacks if kokoro fails
+  piper_binary: "models/piper/piper"
+  voice_model:  "models/piper/en_US-lessac-medium.onnx"
+  fallback_engine: "espeak"
+
+  speaking_rate: 1.0   # 0.8 = slower/calmer, 1.2 = faster
+  output_device: -1
+
+audio:
+  sample_rate: 16000
+  channels: 1
+  chunk_duration_ms: 80
+  input_device: -1
+
+skills:
+  timer:
+    enabled: true
+  weather:
+    enabled: true
+    default_city: ""
+  system_control:
+    enabled: true
+    allow_app_launch: true
+    allow_system_control: true
+  web_search:
+    enabled: true
+    engine: "duckduckgo"
+    max_results: 3
+
+logging:
+  level: "INFO"
+  file: "logs/aria.log"
+  console: true

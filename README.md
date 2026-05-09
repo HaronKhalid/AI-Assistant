@@ -1,4 +1,4 @@
-# 🎙️ ARIA — Open Source Voice Assistant
+# ARIA — Open Source Voice Assistant
 ### Built for Linux · CPU-Optimized · Fully Offline
 
 ---

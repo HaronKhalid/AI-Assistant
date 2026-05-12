@@ -61,6 +61,7 @@ That's it! The setup script handles all dependencies, model downloads, and confi
 📁 Project Structure
 Code
 
+```
 AI-Assistant/
 ├── main.py                      # Application entry point
 ├── setup.sh                     # Automated installation & setup
@@ -88,6 +89,7 @@ AI-Assistant/
 ├── models/                      # Auto-downloaded ML models (gitignored)
 ├── logs/                        # Application logs
 └── README.md                    # This file
+```
 
 ⚙️ Configuration
 

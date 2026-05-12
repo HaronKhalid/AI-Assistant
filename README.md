@@ -110,7 +110,7 @@ enable_vad: true
 enable_web_search: false
 log_level: "INFO"
 
-🎤 Usage
+# 🎤 Usage
 Start ARIA
 bash
 
@@ -132,13 +132,13 @@ python main.py --config custom_config.yaml    # Use custom config
 python main.py --debug                        # Enable debug logging
 python main.py --offline                      # Force offline mode
 
-🛠️ Extending with Custom Skills
+# 🛠️ Extending with Custom Skills
 
 Create a new skill in skills/ directory:
 Python
 
 # skills/my_skill.py
-
+```
 class MySkill:
     def __init__(self):
         self.name = "my_skill"
@@ -151,6 +151,7 @@ class MySkill:
     def is_applicable(self, text: str) -> bool:
         """Determine if this skill should handle the request"""
         return any(kw in text.lower() for kw in self.keywords)
+```
 
 Then register in router.py:
 Python
@@ -158,7 +159,7 @@ Python
 from skills.my_skill import MySkill
 self.skills.append(MySkill())
 
-📊 Performance Metrics
+# 📊 Performance Metrics
 Metric	Value
 Wake word detection latency	< 100ms
 Speech-to-text processing	~5-10s for 10s audio
@@ -189,7 +190,7 @@ bash
 python -m pip install ollama
 ollama pull mistral
 
-📚 Dependencies
+# 📚 Dependencies
 
 Key Python packages:
 
@@ -200,7 +201,7 @@ Key Python packages:
     pyyaml – Configuration management
 
 See requirements.txt for complete list.
-🤝 Contributing
+# 🤝 Contributing
 
 Contributions are welcome! Please:
 
@@ -209,15 +210,6 @@ Contributions are welcome! Please:
     Commit your changes (git commit -m 'Add amazing feature')
     Push to the branch (git push origin feature/amazing-feature)
     Open a Pull Request
-
-📝 License
-
-This project is licensed under the MIT License – see the LICENSE file for details.
-📞 Support & Resources
-
-    Issues & Bugs: GitHub Issues
-    Discussions: GitHub Discussions
-    Documentation: Check the docs/ directory for detailed guides
 
 🙏 Acknowledgments
 
